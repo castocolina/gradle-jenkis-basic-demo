@@ -6,6 +6,12 @@ node {
         stage "First echo"
         echo "Hey, look, I'm echoing with a timestamp!"
 
+        stage "View current dir files"
+        sh "ls -la"
+
+        stage "View current dir recursive files"
+        sh "ls -laR"
+
         stage "Load settings.gradle"
         // Now load 'externalCall.groovy'.
         def gSettings = load("settings.gradle")
